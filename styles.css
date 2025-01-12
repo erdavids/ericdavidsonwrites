@@ -24,11 +24,11 @@ body {
 }
 
 header {
-    padding: 50px 0;
+    padding: 50px;
 }
 
 .container {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -38,6 +38,15 @@ header {
 .logo {
     font-size: 2.5rem;
     color: #468189;
+
+    a,
+    a:link,
+    a:visited,
+    a:hover,
+    a:active{
+        color: #468189;
+        text-decoration: none;
+    }
 }
 
 nav ul {
@@ -95,27 +104,50 @@ footer {
     color: #468189;
 }
 
-.image-wrapper {
-    width: 100%; /* or specific width */
-    height: 100%; /* or specific height */
-    background-image: url('Images/me.jpg');
-    background-size: cover;
-    transition: background-image 0.3s ease-in-out; /* smooth transition */
-}
 
 /* .image-wrapper:hover {
     background-image: url('Images/me-labels.jpg');
 } */
 
-.image {
+/* .image {
     width: 50%;
     height: auto;
     padding: 50px;
     img {
-        opacity: 0;
         width: 100%;
     }
+} */
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 50%; /* Keeps alignment with the existing .image rule */
+    height: auto;
+    padding: 10px;
+    margin: 50px;
 }
+
+.image-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(5deg, #468189, #468189);
+    transform: rotate(-2deg); /* Tilt the background */
+    transform-origin: center;
+    z-index: 1;
+    pointer-events: none; /* Allows interactions with the image */
+}
+
+.image-wrapper img {
+    position: relative;
+    z-index: 2; /* Ensures the image stays above the background */
+    width: 100%;
+    height: auto;
+}
+
 
 h1 {
     font-size: 2rem;
@@ -142,6 +174,35 @@ a:link,
 a:visited,
 a:hover,
 a:active{
-    color: #468189;
     text-decoration: none;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .image-text-section {
+        flex-direction: column; /* Stack text and image */
+        align-items: center;
+        text-align: center;
+    }
+
+    .text {
+        padding: 20px; /* Reduce padding for better mobile view */
+        text-align: center; /* Center-align the text */
+    }
+
+    .image-wrapper {
+        width: 100%; /* Image takes full width */
+        margin: 20px 0; /* Adjust margins for a clean stack */
+    }
+
+    .container {
+        flex-direction: column; /* Stack logo and nav vertically */
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        gap: 10px; /* Adjust spacing */
+        text-align: center;
+    }
 }
