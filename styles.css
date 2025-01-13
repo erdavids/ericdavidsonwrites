@@ -184,7 +184,7 @@ a:active{
 @media (max-width: 1200px) {
 
     html {
-        font-size: 12px;
+        font-size: 14px;
     }
     .image-text-section {
         flex-direction: column; /* Stack text and image */
@@ -202,7 +202,7 @@ a:active{
     }
 
     .image-wrapper {
-        width: 60%; /* Image takes full width */
+        width: 80%; /* Image takes full width */
         margin: 20px 0; /* Adjust margins for a clean stack */
     }
 
