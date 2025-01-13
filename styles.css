@@ -185,6 +185,23 @@ a:active{
     text-decoration: none;
 }
 
+.note {
+    padding-top: 15px;
+}
+
+.note-date {
+    color: #468189;
+}
+
+.note-link {
+    color: #031926;
+    font-weight: bold;
+}
+
+.note-link:hover {
+    color: #E58F65;
+}
+
 /* Media query for smaller screens */
 @media (max-width: 1200px) {
 
