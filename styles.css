@@ -36,7 +36,7 @@ header {
 }
 
 .logo {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #468189;
 
     a,
@@ -75,7 +75,7 @@ main {
 
 footer {
     background-color: #fff;
-    color: #fff;
+    color: #031926;
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
@@ -135,6 +135,7 @@ footer {
     right: 0;
     bottom: 0;
     background: linear-gradient(5deg, #468189, #468189);
+    /* border-radius: 10px; */
     transform: rotate(-2deg); /* Tilt the background */
     transform-origin: center;
     z-index: 1;
@@ -146,6 +147,7 @@ footer {
     z-index: 2; /* Ensures the image stays above the background */
     width: 100%;
     height: auto;
+    /* border-radius: 10px; */
 }
 
 
@@ -178,7 +180,7 @@ a:active{
 }
 
 /* Media query for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
     .image-text-section {
         flex-direction: column; /* Stack text and image */
         align-items: center;
@@ -187,7 +189,7 @@ a:active{
 
     .text {
         padding: 20px; /* Reduce padding for better mobile view */
-        text-align: center; /* Center-align the text */
+        text-align: left; /* Center-align the text */
     }
 
     .image-wrapper {
