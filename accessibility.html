@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Example</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="controls">
+        <label for="font-selector">Choose Font:</label>
+        <select id="font-selector">
+            <option value="Cardo, serif">Cardo (Default)</option>
+            <option value="Arial, sans-serif">Arial</option>
+            <option value="'Times New Roman', serif">Times New Roman</option>
+            <option value="Verdana, sans-serif">Verdana</option>
+            <option value="'Courier New', monospace">Courier New</option>
+        </select>
+
+        <label for="font-size">Font Size:</label>
+        <button id="increase-font">Increase</button>
+        <button id="decrease-font">Decrease</button>
+    </div>
+    <div class="content">
+        <h1>Welcome to My Accessible Page</h1>
+        <p>This is an example of how to provide accessibility options on a web page. Your preferences will persist across pages.</p>
+    </div>
+
+    <!-- Include the shared JavaScript file -->
+    <script src="accessibility.js"></script>
+</body>
+</html>

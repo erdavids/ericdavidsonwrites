@@ -17,7 +17,7 @@ body {
     font-weight: 400;
     font-style: normal;
     line-height: 1.6;
-    color: #031926;
+    color: #191921;
     background-color: #ffffff;
     margin: 0;
     padding: 0;
@@ -135,7 +135,7 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(5deg, #468189, #468189);
+    /* background: linear-gradient(5deg, #468189, #468189); */
     /* border-radius: 10px; */
     transform: rotate(-2deg); /* Tilt the background */
     transform-origin: center;
